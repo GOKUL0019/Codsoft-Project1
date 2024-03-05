@@ -1,0 +1,77 @@
+#include<iostream>
+using namespace std;
+class book{
+    public:
+    string title;
+    string author;
+    string isbn;
+    double prize;
+    book(){
+        title=" ";
+        author=" ";
+        isbn=" ";
+        prize=0.0;
+    }
+    book(string title,string author){
+		title=title;
+		author=author;
+	}
+	book(string title,string author,string isbn){
+		title=title;
+		author=author;
+		isbn=isbn;
+	}
+   	book(string title,string author,string isbn,double prize){
+		title=title;
+		author=author;
+		isbn=isbn;
+		prize=prize;
+	}
+	void setTitle(string title) {
+        title = title;
+        cout<<"------------MODIFIED--------------"<<endl;
+        cout<<"Title: " <<title<<endl;
+    }
+
+    void setAuthor(string author) {
+        author = author;
+        cout<< "Author: "<<author<<endl;
+    }
+
+    void setISBN(string isbn) {
+        isbn = isbn;
+        cout<<"ISBN: " <<isbn<<endl;
+    }
+
+    void setPrize(double prize) {
+        prize =prize;
+        cout<<"Price: "<<prize<<endl;
+    }
+	void get1(){
+	    cout<<"ENTER the title:";
+		cin>>title;
+		cout<<"Enter the author name:";
+		cin>>author;
+		cout<<"Enter the isbn:";
+		cin>>isbn;
+		cout<<"Enter the prize:";
+		cin>>prize;
+	}
+	void set1() {
+	cout<<"--------------------"<<endl;
+    cout << "Title: " << title << endl;
+    cout << "Author: " << author << endl;
+    cout << "ISBN: " << isbn << endl;
+    cout << "Price: " << prize << endl;
+	}
+};
+int main()
+{
+    book obj1;
+    obj1.get1();
+    obj1.set1();
+    obj1.setTitle("New Title");
+    obj1.setAuthor("New Author");
+    obj1.setISBN("New ISBN");
+    obj1.setPrize(25.99);
+}
