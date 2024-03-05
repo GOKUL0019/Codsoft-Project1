@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main(){
+    srand(time(0));
+    int guess;
+    int secret_num=rand()%100 + 1;
+    int attemps=0;
+    cout<<"-----------START GUESSING-------------"<<endl;
+    do{
+        cout<<"ENTER YOUR GUESS:";
+        cin>>guess;
+        attemps++;
+        if (guess==secret_num){
+            cout<<"YOUR GUESS IS CORRECT"<<endl;
+            cout<<"---------SUCESSFULL COMPLETED--------"<<endl;
+        }
+        else if(guess<secret_num){
+            cout<<"YOUR GUESS IS LOW"<<endl;
+        }
+        else if(guess>secret_num){
+            cout<<"YOUR GUESS IS HIGH"<<endl;
+        }
+        }while(guess!=secret_num);
+        return 0;
+}
